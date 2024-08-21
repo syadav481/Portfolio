@@ -11,7 +11,7 @@ import {
   NavLink,
   Image,
 } from "@mantine/core";
-import { ToggleColorSchemeButton } from "./components/ToggleColorSchemeButton";
+import ToggleColorSchemeButton from "./components/ToggleColorSchemeButton";
 import LinkedinButton from "./components/LinkedinButton";
 import GithubButton from "./components/GithubButton";
 import {

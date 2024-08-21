@@ -4,12 +4,11 @@ import {
   useMantineColorScheme,
   useComputedColorScheme,
   Group,
-  Button,
 } from "@mantine/core";
 import { IconSun, IconMoon } from "@tabler/icons-react";
 import classes from "./ToggleColorSchemeButton.module.css";
 
-export function ToggleColorSchemeButton() {
+export default function ToggleColorSchemeButton() {
   const { setColorScheme } = useMantineColorScheme();
   const computedColorScheme = useComputedColorScheme("light", {
     getInitialValueInEffect: true,
