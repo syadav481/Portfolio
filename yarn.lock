@@ -190,6 +190,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mantine/spotlight@npm:^7.12.1":
+  version: 7.12.1
+  resolution: "@mantine/spotlight@npm:7.12.1"
+  dependencies:
+    "@mantine/store": "npm:7.12.1"
+  peerDependencies:
+    "@mantine/core": 7.12.1
+    "@mantine/hooks": 7.12.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 10c0/90cbbd40e71fd973aa342859dc8da48d473e506e1612b622ba8ec68e7b3a617b2e041f537759c75bd299d035008fd24e67303e806e537f9d3af22c5b94cd302a
+  languageName: node
+  linkType: hard
+
+"@mantine/store@npm:7.12.1":
+  version: 7.12.1
+  resolution: "@mantine/store@npm:7.12.1"
+  peerDependencies:
+    react: ^18.2.0
+  checksum: 10c0/806133ac14b22582d5686ef36cbc93287d3408a6b3ce4db5a0aa28c713cddc5447e666e6dd52f1c6e20d739f58921deb722ef553a2456a24d6600c6ade9925d7
+  languageName: node
+  linkType: hard
+
 "@next/env@npm:14.2.4":
   version: 14.2.4
   resolution: "@next/env@npm:14.2.4"
@@ -2477,6 +2500,7 @@ __metadata:
   dependencies:
     "@mantine/core": "npm:7.12.1"
     "@mantine/hooks": "npm:7.12.1"
+    "@mantine/spotlight": "npm:^7.12.1"
     "@tabler/icons-react": "npm:3.12.0"
     "@types/node": "npm:20.14.8"
     "@types/react": "npm:18.3.3"
