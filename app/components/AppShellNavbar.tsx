@@ -7,23 +7,15 @@ import LinkedinButton from "./LinkedinButton";
 import GithubButton from "./GithubButton";
 import HomeButton from "./HomeButton";
 
-interface AppShellNavbarProps {
-  showButtons: boolean;
-}
-
-export default function AppShellNavbar({ showButtons }: AppShellNavbarProps) {
-  const buttons = [
-    <ToggleColorSchemeButton key="color-scheme" />,
-    <HomeButton key="home" />,
-    <LinkedinButton key="linkedin" />,
-    <GithubButton key="github" />,
-  ];
-
+export default function AppShellNavbar() {
   return (
     <AppShell header={{ height: 60 }}>
       <AppShell.Header>
         <Center style={{ marginTop: "5px" }}>
-          {showButtons ? buttons : ""}
+          <ToggleColorSchemeButton key="color-scheme" />
+          <HomeButton key="home" />
+          <LinkedinButton key="linkedin" />
+          <GithubButton key="github" />
         </Center>
       </AppShell.Header>
     </AppShell>
