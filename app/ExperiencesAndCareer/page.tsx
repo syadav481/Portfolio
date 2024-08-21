@@ -37,6 +37,7 @@ export default function Page() {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
+        padding: "20px",
       }}
     >
       <Stack>

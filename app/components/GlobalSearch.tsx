@@ -1,36 +1,71 @@
-import { Button, Group, Modal, Pill, Space, Text } from "@mantine/core";
-import { useDisclosure, useHotkeys, useOs } from "@mantine/hooks";
+import { Autocomplete, Button, Modal, Pill, Space, Text } from "@mantine/core";
+import {
+  getHotkeyHandler,
+  useDisclosure,
+  useHotkeys,
+  useOs,
+} from "@mantine/hooks";
 import { IconSearch } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-interface Suggestion {
-  path: string;
-  name: string;
-}
+const pageNameToRoute: { [key: string]: string } = {
+  Home: "/",
+  "Experiences and Career": "ExperiencesAndCareer",
+};
 
-const suggestions: Suggestion[] = [
-  { path: "/", name: "Home" },
-  { path: "/ExperiencesAndCareer", name: "Experiences and Career" },
+const suggestions = [
+  { group: "Pages", items: ["Home", "Experiences and Career"] },
   // Add more suggestions as needed
 ];
 function GlobalSearch() {
-  const [query, setQuery] = useState<string>("");
   const [searchModalOpen, { open, close }] = useDisclosure(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<Suggestion[]>(
-    []
-  );
-
+  const [searchQuery, setSearchQuery] = useState("");
   const os = useOs();
 
-  useHotkeys([["ctrl+k", () => open()]]);
+  useHotkeys([["mod+k", () => open()]]);
+
+  const router = useRouter();
 
   return (
     <>
-      <Modal opened={searchModalOpen} onClose={close}></Modal>
+      <Modal
+        centered
+        opened={searchModalOpen}
+        onClose={close}
+        withCloseButton={false}
+        overlayProps={{
+          backgroundOpacity: 0.55,
+          blur: 5,
+        }}
+        radius="lg"
+      >
+        <Autocomplete
+          placeholder="look for a page"
+          data={suggestions}
+          data-autofocus
+          comboboxProps={{
+            transitionProps: { transition: "pop", duration: 100 },
+          }}
+          leftSection={<IconSearch size={16} />}
+          onChange={(value) => setSearchQuery(value)}
+          onKeyDown={getHotkeyHandler([
+            [
+              "enter",
+              () => {
+                if (searchQuery in pageNameToRoute) {
+                  router.push(pageNameToRoute[searchQuery]);
+                }
+              },
+            ],
+          ])}
+        />
+      </Modal>
 
       <Button
         leftSection={<IconSearch size={16} />}
         rightSection={<Text size="sm"></Text>}
+        onClick={open}
         variant="light"
         radius="lg"
       >

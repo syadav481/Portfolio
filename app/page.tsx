@@ -21,6 +21,7 @@ import {
   IconUser,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import GlobalSearch from "./components/GlobalSearch";
 
 export default function HomePage() {
   return (
@@ -30,6 +31,7 @@ export default function HomePage() {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
+        padding: "10px",
       }}
     >
       <Stack>
