@@ -20,6 +20,7 @@ import {
   IconSchool,
   IconUser,
 } from "@tabler/icons-react";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -36,7 +37,7 @@ export default function HomePage() {
           <ToggleColorSchemeButton />
           <LinkedinButton />
           <GithubButton />
-          <Title>Hi! I&apos;m Swaraj</Title>
+          <Title>Swaraj Yadav</Title>
           <Space />
           <Image
             alt="A picture of me"
@@ -50,7 +51,7 @@ export default function HomePage() {
 
         <Divider />
         <Text>
-          I&apos;m a senior at the University of Michigan studying computer
+          Hi! I&apos;m a senior at the University of Michigan studying computer
           science.
         </Text>
 
@@ -60,24 +61,28 @@ export default function HomePage() {
             label="About me"
             leftSection={<IconUser size="1.5rem" stroke={1.5} />}
             variant="subtle"
+            component={Link}
           />
           <NavLink
             href=""
             label="Education"
             leftSection={<IconSchool size="1.5rem" stroke={1.5} />}
             variant="subtle"
+            component={Link}
           />
           <NavLink
-            href=""
+            href="/ExperiencesAndCareer"
             label="Experiences and Career"
             leftSection={<IconBriefcase size="1.5rem" stroke={1.5} />}
             variant="subtle"
+            component={Link}
           />
           <NavLink
             href=""
             label="Projects"
             leftSection={<IconFileCode size="1.5rem" stroke={1.5} />}
             variant="subtle"
+            component={Link}
           />
         </Group>
       </Stack>
