@@ -1,11 +1,21 @@
 "use client";
 
-import { Stack, Title, Text, Divider, Group } from "@mantine/core";
+import {
+  Stack,
+  Title,
+  Text,
+  Divider,
+  Group,
+  Center,
+  Tabs,
+} from "@mantine/core";
 import { ToggleColorSchemeButton } from "./components/ToggleColorSchemeButton";
+import LinkedinButton from "./components/LinkedinButton";
+import GithubButton from "./components/GithubButton";
 
 export default function HomePage() {
   return (
-    <div
+    <Center
       style={{
         display: "flex",
         justifyContent: "center",
@@ -16,6 +26,8 @@ export default function HomePage() {
       <Stack>
         <Group>
           <ToggleColorSchemeButton />
+          <LinkedinButton />
+          <GithubButton />
           <Title>Hi! I&apos;m Swaraj</Title>
         </Group>
 
@@ -25,6 +37,6 @@ export default function HomePage() {
           science in my last semester.
         </Text>
       </Stack>
-    </div>
+    </Center>
   );
 }

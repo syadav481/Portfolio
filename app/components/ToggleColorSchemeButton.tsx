@@ -4,6 +4,7 @@ import {
   useMantineColorScheme,
   useComputedColorScheme,
   Group,
+  Button,
 } from "@mantine/core";
 import { IconSun, IconMoon } from "@tabler/icons-react";
 import classes from "./ToggleColorSchemeButton.module.css";
@@ -20,7 +21,7 @@ export function ToggleColorSchemeButton() {
         onClick={() =>
           setColorScheme(computedColorScheme === "light" ? "dark" : "light")
         }
-        variant="default"
+        variant="subtle"
         size="xl"
         aria-label="Toggle color scheme"
       >
