@@ -14,7 +14,6 @@ function GlobalSearch() {
     {
       id: "home",
       label: "Home",
-      description: "Get to home page",
       onClick: () => {
         router.push("/");
       },
@@ -22,7 +21,6 @@ function GlobalSearch() {
     {
       id: "experiencesAndCareer",
       label: "Experiences and Career",
-      description: "Get to the Experiences and Career page",
       onClick: () => {
         router.push("/ExperiencesAndCareer");
       },
@@ -30,9 +28,22 @@ function GlobalSearch() {
     {
       id: "education",
       label: "Education",
-      description: "Get to the Education page",
       onClick: () => {
         router.push("/Education");
+      },
+    },
+    {
+      id: "projects",
+      label: "Projects",
+      onClick: () => {
+        router.push("/Projects");
+      },
+    },
+    {
+      id: "AboutMe",
+      label: "About Me",
+      onClick: () => {
+        router.push("/AboutMe");
       },
     },
   ];

@@ -12,15 +12,10 @@ import {
   Text,
   Divider,
   Table,
-  Box,
-  Group,
   Accordion,
   TableCaption,
   Container,
   Center,
-  Affix,
-  Portal,
-  Transition,
 } from "@mantine/core";
 import {
   IconBrandCpp,
@@ -39,28 +34,18 @@ interface ClassDescription {
 function Page() {
   const coursework: ClassDescription[] = [
     {
-      class: "EECS 281, Data Structures and Algorithms",
-      relevantProjects: ["SQL Server"],
-      descriptions: ["An implementation of a SQL engine written in C++"],
-      icons: [<IconBrandCpp key={"eecs281cpp1"} />],
-    },
-    {
-      class: "EECS 390, Programming Paradigms",
-      relevantProjects: ["Meta-Circular Evaluator", "uC Transpiler / Compiler"],
+      class: "EECS 498, Formal Verification of Distributed Systems",
+      relevantProjects: ["Distributed Sharded Key-Value Store"],
       descriptions: [
-        "Meta-Circular Evaluator: A Scheme interpreter written in Scheme.",
-        "uC Transpiler / Compiler: A transpiler for a small C-like programming language that transforms uC to C++.",
+        "Distributed Sharded Key-Value Store: A programmatic proof in Dafny of a protocol for implementing a Distributed Sharded Key-Value store.",
       ],
-      icons: [
-        <IconParentheses key={"eecs390scheme1"} />,
-        <IconBrandPython key={"eecs390py2"} />,
-      ],
+      icons: [<IconZoomCheck key={"eecs498dafny1"} />],
     },
     {
       class: "EECS 485, Web Dev",
       relevantProjects: ["Map Reduce"],
       descriptions: [
-        "Map Reduce: A framework for processing and generating large data sets with a distributed algorithm on a cluster",
+        "Map Reduce: A framework for processing and generating large data sets with a distributed algorithm on a cluster. Implemented with Python multiprocessing.",
       ],
       icons: [<IconBrandPython key={"eecs485py1"} />],
     },
@@ -72,9 +57,9 @@ function Page() {
         "Multithreaded File System",
       ],
       descriptions: [
-        "Thread Library: A library for managing threads and synchronization.",
-        "Virtual Memory Pager: A component that manages the virtual memory system, handling paging and memory allocation.",
-        "Multithreaded File System: A file system designed to support multi-threading for concurrent file operations.",
+        "Thread Library: A kernel-level library for managing threads and synchronization.",
+        "Virtual Memory Pager: A component that manages a virtual memory system, handling paging and memory allocation. Supports file and swap backed pages.",
+        "Multithreaded File System: A concurrent file system following the UNIX inode model and hand-over-hand locking.",
       ],
       icons: [
         <IconBrandCpp key={"eecs482cpp1"} />,
@@ -83,12 +68,22 @@ function Page() {
       ],
     },
     {
-      class: "EECS 498, Formal Verification of Distributed Systems",
-      relevantProjects: ["Distributed Sharded Key-Value Store"],
+      class: "EECS 390, Programming Paradigms",
+      relevantProjects: ["Meta-Circular Evaluator", "uC Transpiler / Compiler"],
       descriptions: [
-        "Distributed Sharded Key-Value Store: A programmatic proof of a protocol for implementing a Distributed Sharded Key-Value store.",
+        "Meta-Circular Evaluator: A Scheme interpreter written in Scheme.",
+        "uC Transpiler / Compiler: A transpiler for uC - a small programming language - to C++.",
       ],
-      icons: [<IconZoomCheck key={"eecs498dafny1"} />],
+      icons: [
+        <IconParentheses key={"eecs390scheme1"} />,
+        <IconBrandPython key={"eecs390py2"} />,
+      ],
+    },
+    {
+      class: "EECS 281, Data Structures and Algorithms",
+      relevantProjects: ["SQL Server"],
+      descriptions: ["An implementation of a SQL database"],
+      icons: [<IconBrandCpp key={"eecs281cpp1"} />],
     },
   ];
 
@@ -127,7 +122,7 @@ function Page() {
           <Text>
             I am doing my bachelors at the University of Michigan - Ann Arbor.
             Below are some courses that I have found useful and some projects I
-            did in them.
+            completed while taking those classes that I felt were valuable.
           </Text>
 
           <Table

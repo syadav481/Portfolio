@@ -52,7 +52,7 @@ export default function HomePage() {
 
         <Group>
           <NavLink
-            href=""
+            href="/AboutMe"
             label="About me"
             leftSection={<IconUser size="1.5rem" stroke={1.5} />}
             variant="subtle"
@@ -73,7 +73,7 @@ export default function HomePage() {
             component={Link}
           />
           <NavLink
-            href=""
+            href="/Projects"
             label="Projects"
             leftSection={<IconFileCode size="1.5rem" stroke={1.5} />}
             variant="subtle"
