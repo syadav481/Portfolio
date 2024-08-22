@@ -27,6 +27,14 @@ function GlobalSearch() {
         router.push("/ExperiencesAndCareer");
       },
     },
+    {
+      id: "education",
+      label: "Education",
+      description: "Get to the Education page",
+      onClick: () => {
+        router.push("/Education");
+      },
+    },
   ];
   return (
     <>

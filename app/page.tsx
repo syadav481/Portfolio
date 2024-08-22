@@ -11,9 +11,6 @@ import {
   NavLink,
   Image,
 } from "@mantine/core";
-import ToggleColorSchemeButton from "./components/ToggleColorSchemeButton";
-import LinkedinButton from "./components/LinkedinButton";
-import GithubButton from "./components/GithubButton";
 import {
   IconBriefcase,
   IconFileCode,
@@ -21,7 +18,6 @@ import {
   IconUser,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import GlobalSearch from "./components/GlobalSearch";
 
 export default function HomePage() {
   return (
@@ -36,19 +32,16 @@ export default function HomePage() {
     >
       <Stack>
         <Group>
-          <ToggleColorSchemeButton />
-          <LinkedinButton />
-          <GithubButton />
-          <Title>Swaraj Yadav</Title>
-          <Space />
           <Image
             alt="A picture of me"
             src="/selfie_smaller.png"
             h={100}
             w="auto"
             fit="contain"
-            style={{ borderRadius: "50%" }}
+            style={{ borderRadius: "50%", marginLeft: "15%" }}
           />
+          <Title>Swaraj Yadav</Title>
+          <Space />
         </Group>
 
         <Divider />
@@ -66,7 +59,7 @@ export default function HomePage() {
             component={Link}
           />
           <NavLink
-            href=""
+            href="/Education"
             label="Education"
             leftSection={<IconSchool size="1.5rem" stroke={1.5} />}
             variant="subtle"

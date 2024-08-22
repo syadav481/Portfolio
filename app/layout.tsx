@@ -3,6 +3,7 @@ import React from "react";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import { theme } from "../theme";
 import "@mantine/spotlight/styles.css";
+import AppShellNavbar from "./components/AppShellNavbar";
 
 export const metadata = {
   title: "Mantine Next.js template",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: any }) {
       </head>
       <body>
         <MantineProvider theme={theme} defaultColorScheme="dark">
+          <AppShellNavbar />
           {children}
         </MantineProvider>
       </body>
