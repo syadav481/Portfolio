@@ -16,6 +16,11 @@ import {
   Group,
   Accordion,
   TableCaption,
+  Container,
+  Center,
+  Affix,
+  Portal,
+  Transition,
 } from "@mantine/core";
 import {
   IconBrandCpp,
@@ -114,50 +119,36 @@ function Page() {
 
   return (
     <>
-      <Stack
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "10px",
-        }}
-      >
-        <Title>Education</Title>
-        <Divider />
+      <Container size="sm">
+        <Stack>
+          <Title style={{ marginTop: "5rem" }}>Education</Title>
+          <Divider variant="dotted" />
 
-        <Text
-          variant="gradient"
-          fw={700}
-          size="lg"
-          gradient={{
-            from: "blue",
-            to: "rgba(255, 203, 5,1)",
-            deg: 90,
-          }}
-        >
-          I am doing my bachelors at the University of Michigan - Ann Arbor.
-        </Text>
-        <Divider />
+          <Text>
+            I am doing my bachelors at the University of Michigan - Ann Arbor.
+            Below are some courses that I have found useful and some projects I
+            did in them.
+          </Text>
 
-        <Table
-          variant=""
-          verticalSpacing="xs"
-          withRowBorders={false}
-          withTableBorder
-          style={{}}
-        >
-          <TableCaption>
-            Some courses I found valuable and the projects I completed in them
-          </TableCaption>
-          <Table.Thead>
-            <Table.Tr>
-              <Table.Th style={{ width: "30%" }}>Class</Table.Th>
-              <Table.Th>Projects</Table.Th>
-            </Table.Tr>
-          </Table.Thead>
-          <Table.Tbody>{rows}</Table.Tbody>
-        </Table>
-
+          <Table
+            variant=""
+            verticalSpacing="xs"
+            withRowBorders={false}
+            style={{ margin: "1rem" }}
+          >
+            <TableCaption>
+              Some other classes I have taken: Machine Learning, Discrete Math,
+              Computer Architecture, Computer Security
+            </TableCaption>
+            <Table.Thead>
+              <Table.Tr>
+                <Table.Th style={{ width: "30%" }}>Class</Table.Th>
+                <Table.Th>Projects</Table.Th>
+              </Table.Tr>
+            </Table.Thead>
+            <Table.Tbody>{rows}</Table.Tbody>
+          </Table>
+        </Stack>
         <AspectRatio ratio={1} maw={400} mx="auto">
           <Image
             style={{ padding: "2%", borderRadius: "50%" }}
@@ -165,14 +156,16 @@ function Page() {
             alt="A picture of the University of Michigan, where I am doing my bachelors"
           />
         </AspectRatio>
-        <Anchor
-          href="https://www.etsy.com/shop/ThatchCityStudio"
-          target="_blank"
-          style={{ justifyContent: "center" }}
-        >
-          Credit
-        </Anchor>
-      </Stack>
+        <Center>
+          <Anchor
+            href="https://www.etsy.com/shop/ThatchCityStudio"
+            target="_blank"
+            style={{ marginTop: "1rem" }}
+          >
+            Credit
+          </Anchor>
+        </Center>
+      </Container>
     </>
   );
 }
