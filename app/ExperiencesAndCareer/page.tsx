@@ -20,10 +20,16 @@ import {
   Flex,
   ActionIcon,
   Tooltip,
+  ThemeIcon,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {
   IconArrowsMaximize,
+  IconBrandCSharp,
+  IconBrandDocker,
+  IconBrandReact,
+  IconBrandTypescript,
+  IconBrandVisualStudio,
   IconDevicesPc,
   IconGitBranch,
   IconHeartRateMonitor,
@@ -171,7 +177,15 @@ export default function Page() {
               for a Work-Study in the fall. In my time at AccumTech I have
               worked on both frontend and backend tasks.
             </Text>
-            <Title size="h4">Frontend</Title>
+            <Group gap="xs">
+              <Title size="h4">Frontend</Title>
+              <ThemeIcon variant="outline" size="sm">
+                <IconBrandReact />
+              </ThemeIcon>
+              <ThemeIcon variant="outline" size="sm">
+                <IconBrandTypescript />
+              </ThemeIcon>
+            </Group>
             <List>
               <ListItem>
                 My exposure to frontend work in this role was almost entirely
@@ -188,7 +202,18 @@ export default function Page() {
                 core server, webpack, React.js and TypeScript.
               </ListItem>
             </List>
-            <Title size="h4">Backend</Title>
+            <Group gap="xs">
+              <Title size="h4">Backend</Title>
+              <ThemeIcon variant="outline" size="sm">
+                <IconBrandCSharp />
+              </ThemeIcon>
+              <ThemeIcon variant="outline" size="sm">
+                <IconBrandDocker />
+              </ThemeIcon>
+              <ThemeIcon variant="outline" size="sm">
+                <IconBrandVisualStudio />
+              </ThemeIcon>
+            </Group>
             <List>
               <ListItem>
                 My exposure to backend work was almost entirely through another
@@ -202,7 +227,7 @@ export default function Page() {
               </ListItem>
               <ListItem>
                 The stack that I worked with for this project was .NET, C#, SQL,
-                RabbitMQ, and Rebus.
+                RabbitMQ, ServiceFabric, Docker and Rebus.
               </ListItem>
             </List>
           </Stack>
