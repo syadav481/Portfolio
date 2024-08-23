@@ -1,6 +1,6 @@
 "use client";
 
-import { Center, Group, Pill, Space, useMantineTheme } from "@mantine/core";
+import { Center, Group, Space, useMantineTheme } from "@mantine/core";
 import React from "react";
 import ToggleColorSchemeButton from "./ToggleColorSchemeButton";
 import LinkedinButton from "./LinkedinButton";
@@ -9,7 +9,7 @@ import HomeButton from "./HomeButton";
 import GlobalSearch from "./GlobalSearch";
 
 export default function AppShellNavbar() {
-  const theme = useMantineTheme()
+  const theme = useMantineTheme();
 
   return (
     <Center>

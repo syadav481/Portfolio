@@ -1,28 +1,26 @@
-"use client"
+"use client";
 
-import { Text, Image, Container, Divider, Stack, Title, Grid, Tooltip, AspectRatio, Button, Group, ActionIcon, LoadingOverlay, Loader, Center } from "@mantine/core";
+import { Text, Image, Container, Divider, Stack, Title, Grid, Tooltip, AspectRatio, Group, ActionIcon, Loader, Center } from "@mantine/core";
 import React, { useEffect, useState } from "react";
-import axios, { Axios } from "axios";
+import axios from "axios";
 import { IconCat } from "@tabler/icons-react";
 
 function Page() {
   const [catImageUrl, setCatImageUrl] = useState<string>('');
 
   const getCat = async () => {
-    setCatImageUrl('')
+    setCatImageUrl('');
     try {
-      const reqUrl = `https://cataas.com/cat?${new Date().getTime()}`
+      const reqUrl = `https://cataas.com/cat?${new Date().getTime()}`;
       const response = await axios.get<string>(reqUrl);
 
-      console.log('old', catImageUrl)
       setCatImageUrl(response.request.responseURL);
-      console.log('new', catImageUrl)
     } catch (error) {
-      console.error('Error fetching the cat image:', error);
+      setCatImageUrl('');
     }
   };
 
-  useEffect(() => { getCat() }, [])
+  useEffect(() => { getCat(); }, []);
 
   return (
     <Container size="sm">
@@ -40,7 +38,7 @@ function Page() {
         <Divider variant="dotted" />
         <Tooltip label="I wanted to show my Valorant stats on this page but the Riot games won't give me an API key :(">
           <Text>
-            Hi! I'm a senior at UMich. Some things I'm interested in are
+            Hi! I&apos;m a senior at UMich. Some things I&apos;m interested in are
             going to the gym, silly cats, playing
             VALORANT, and Systems Programming.
           </Text>

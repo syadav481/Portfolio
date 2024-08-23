@@ -1,6 +1,6 @@
 import "@mantine/core/styles.css";
 import React from "react";
-import { MantineProvider, ColorSchemeScript, AppShell, Space } from "@mantine/core";
+import { MantineProvider, ColorSchemeScript, Space } from "@mantine/core";
 import { theme } from "../theme";
 import "@mantine/spotlight/styles.css";
 import AppShellNavbar from "./components/AppShellNavbar";

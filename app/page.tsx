@@ -71,6 +71,7 @@ export default function HomePage() {
             leftSection={<IconBriefcase size="1.5rem" stroke={1.5} />}
             variant="subtle"
             component={Link}
+
           />
           <NavLink
             href="/Projects"
