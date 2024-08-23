@@ -1,6 +1,6 @@
 import "@mantine/core/styles.css";
 import React from "react";
-import { MantineProvider, ColorSchemeScript } from "@mantine/core";
+import { MantineProvider, ColorSchemeScript, AppShell, Space } from "@mantine/core";
 import { theme } from "../theme";
 import "@mantine/spotlight/styles.css";
 import AppShellNavbar from "./components/AppShellNavbar";
@@ -24,8 +24,9 @@ export default function RootLayout({ children }: { children: any }) {
         <MantineProvider theme={theme} defaultColorScheme="dark">
           <AppShellNavbar />
           {children}
+          <Space style={{ marginBottom: '2rem' }} />
         </MantineProvider>
       </body>
-    </html>
+    </html >
   );
 }

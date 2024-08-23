@@ -78,10 +78,9 @@ export default function Page() {
                   <IconMedicalCross />
                 </ActionIcon>
               </Tooltip>
-              <Tooltip
-                label={
-                  "Checkout the alivio official documentation for technical details on things like architecture, deployment etc!"
-                }
+              <Tooltip label={
+                "Checkout the alivio official documentation for technical details on things like architecture, deployment etc!"
+              }
               >
                 <ActionIcon
                   variant="subtle"
@@ -268,112 +267,107 @@ export default function Page() {
           </Stack>
         </Container>
       </Modal>
-      <Center
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-          padding: "20px",
-        }}
-      >
-        <Stack style={{ marginTop: "3rem" }}>
-          <Title>Experiences</Title>
-          <Text>My work experience and extra curriculars</Text>
-          <Space />
+      <Center>
+        <Container
+        >
+          <Stack>
+            <Title>Experiences</Title>
+            <Text>My work experience and extra curriculars</Text>
+            <Space />
 
-          <Group>
-            <Timeline
-              active={3}
-              bulletSize={24}
-              lineWidth={2}
-              style={{ maxWidth: "24rem" }}
-            >
-              <Timeline.Item
-                bullet={<IconGitBranch size={12} />}
-                title="AccumTech: Software Developer Intern, Work Study"
+            <Group>
+              <Timeline
+                active={3}
+                bulletSize={24}
+                lineWidth={2}
+                style={{ maxWidth: "24rem" }}
               >
-                <Stack>
-                  <Text c="dimmed" size="sm">
-                    I&apos;m working as a Software Developer Intern (and now
-                    part time) at AccumTech. I&apos;ve worked with React.js,
-                    Webpack, and TypeScript for frontend and C# and .NET for
-                    backend work.
-                  </Text>
-                  <Button
-                    variant="light"
-                    size="xs"
-                    onClick={openAccumTech}
-                    leftSection={<IconArrowsMaximize />}
-                  >
-                    More...
-                  </Button>
-                </Stack>
-              </Timeline.Item>
-              <Timeline.Item
-                bullet={<IconDevicesPc size={12} />}
-                title="UM GLaDOS: Research Assistant"
-              >
-                <Stack>
-                  <Text c="dimmed" size="sm" style={{ maxWidth: "300px" }}>
-                    I was a research assistant in the U of M graduate lab for
-                    distributed and operating systems. I worked with a PhD
-                    student on formal methods for Assured Micropatching for
-                    systems software in Coq.
-                  </Text>
-                  <Button
-                    variant="light"
-                    size="xs"
-                    onClick={openGlados}
-                    leftSection={<IconArrowsMaximize />}
-                  >
-                    More...
-                  </Button>
-                </Stack>
-              </Timeline.Item>
-              <Timeline.Item
-                title="MHEAL, Project Alivio: Software Team Lead"
-                bullet={<IconHeartRateMonitor size={12} />}
-              >
-                <Stack>
-                  <Text c="dimmed" size="sm" style={{ maxWidth: "300px" }}>
-                    I led a team of students to maintain and iterate upon an app
-                    that is used by nurses at the San Juan de Dios Hospital to
-                    reduce pressure ulcers among patients.
-                  </Text>
-                  <Button
-                    variant="light"
-                    size="xs"
-                    onClick={openAlivio}
-                    leftSection={<IconArrowsMaximize />}
-                  >
-                    More...
-                  </Button>
-                </Stack>
-              </Timeline.Item>
+                <Timeline.Item
+                  bullet={<IconGitBranch size={12} />}
+                  title="AccumTech: Software Developer Intern, Work Study"
+                >
+                  <Stack>
+                    <Text c="dimmed" size="sm">
+                      I&apos;m working as a Software Developer Intern (and now
+                      part time) at AccumTech. I&apos;ve worked with React.js,
+                      Webpack, and TypeScript for frontend and C# and .NET for
+                      backend work.
+                    </Text>
+                    <Button
+                      variant="light"
+                      size="xs"
+                      onClick={openAccumTech}
+                      leftSection={<IconArrowsMaximize />}
+                    >
+                      More...
+                    </Button>
+                  </Stack>
+                </Timeline.Item>
+                <Timeline.Item
+                  bullet={<IconDevicesPc size={12} />}
+                  title="UM GLaDOS: Research Assistant"
+                >
+                  <Stack>
+                    <Text c="dimmed" size="sm" style={{ maxWidth: "300px" }}>
+                      I was a research assistant in the U of M graduate lab for
+                      distributed and operating systems. I worked with a PhD
+                      student on formal methods for Assured Micropatching for
+                      systems software in Coq.
+                    </Text>
+                    <Button
+                      variant="light"
+                      size="xs"
+                      onClick={openGlados}
+                      leftSection={<IconArrowsMaximize />}
+                    >
+                      More...
+                    </Button>
+                  </Stack>
+                </Timeline.Item>
+                <Timeline.Item
+                  title="MHEAL, Project Alivio: Software Team Lead"
+                  bullet={<IconHeartRateMonitor size={12} />}
+                >
+                  <Stack>
+                    <Text c="dimmed" size="sm" style={{ maxWidth: "300px" }}>
+                      I led a team of students to maintain and iterate upon an app
+                      that is used by nurses at the San Juan de Dios Hospital to
+                      reduce pressure ulcers among patients.
+                    </Text>
+                    <Button
+                      variant="light"
+                      size="xs"
+                      onClick={openAlivio}
+                      leftSection={<IconArrowsMaximize />}
+                    >
+                      More...
+                    </Button>
+                  </Stack>
+                </Timeline.Item>
 
-              <Timeline.Item
-                title="UM College of Engineering: EECS 281 IA"
-                bullet={<IconSchool size={15} />}
-              >
-                <Stack>
-                  <Text c="dimmed" size="sm" style={{ maxWidth: "300px" }}>
-                    I currently work as a IA (TA) for EECS 281, Data Structures
-                    and Algorithms.
-                  </Text>
-                  <Button
-                    variant="light"
-                    size="xs"
-                    onClick={openEecs281}
-                    leftSection={<IconArrowsMaximize />}
-                  >
-                    More...
-                  </Button>
-                </Stack>
-              </Timeline.Item>
-            </Timeline>
-          </Group>
-        </Stack>
+                <Timeline.Item
+                  title="UM College of Engineering: EECS 281 IA"
+                  bullet={<IconSchool size={15} />}
+                >
+                  <Stack>
+                    <Text c="dimmed" size="sm" style={{ maxWidth: "300px" }}>
+                      I currently work as a IA (TA) for EECS 281, Data Structures
+                      and Algorithms.
+                    </Text>
+                    <Button
+                      variant="light"
+                      size="xs"
+                      onClick={openEecs281}
+                      leftSection={<IconArrowsMaximize />}
+                    >
+                      More...
+                    </Button>
+                  </Stack>
+                </Timeline.Item>
+              </Timeline>
+            </Group>
+          </Stack>
+        </Container>
       </Center>
     </>
   );

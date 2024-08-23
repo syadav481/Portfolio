@@ -116,7 +116,7 @@ function Page() {
     <>
       <Container size="sm">
         <Stack>
-          <Title style={{ marginTop: "5rem" }}>Education</Title>
+          <Title>Education</Title>
           <Divider variant="dotted" />
 
           <Text>
