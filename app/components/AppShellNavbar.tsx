@@ -19,8 +19,8 @@ export default function AppShellNavbar() {
           backgroundColor: theme.colors['gray'][9],
           maxWidth: '800px',
           width: 'auto',
-          padding: '0.5rem 1rem', // Add padding to make it pill-shaped
-          borderRadius: '9999px', // Fully round the corners for a pill shape
+          padding: '0.5rem 1rem',
+          borderRadius: '9999px',
           justifyContent: 'center'
         }}
       >
