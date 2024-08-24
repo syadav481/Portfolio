@@ -21,15 +21,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <Center
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        padding: "10px",
-      }}
-    >
+    <Center>
       <Stack>
         <Group>
           <Image
