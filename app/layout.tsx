@@ -6,8 +6,8 @@ import "@mantine/spotlight/styles.css";
 import AppShellNavbar from "./components/AppShellNavbar";
 
 export const metadata = {
-  title: "Mantine Next.js template",
-  description: "I am using Mantine with Next.js!",
+  title: "Swaraj Yadav",
+  description: "My portfolio site",
 };
 
 export default function RootLayout({ children }: { children: any }) {
