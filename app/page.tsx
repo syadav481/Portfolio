@@ -10,6 +10,7 @@ import {
   Space,
   NavLink,
   Image,
+  AspectRatio,
 } from "@mantine/core";
 import {
   IconBriefcase,
@@ -24,14 +25,16 @@ export default function HomePage() {
     <Center>
       <Stack>
         <Group>
-          <Image
-            alt="A picture of me"
-            src="/selfie_smaller.png"
-            h={100}
-            w="auto"
-            fit="contain"
-            style={{ borderRadius: "50%", marginLeft: "15%" }}
-          />
+          <AspectRatio ratio={1}>
+            <Image
+              alt="A picture of me"
+              src="/selfie_smaller.png"
+              h={80}
+              w="auto"
+              fit="contain"
+              style={{ borderRadius: "50%" }}
+            />
+          </AspectRatio>
           <Title>Swaraj Yadav</Title>
           <Space />
         </Group>

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Container, Divider, Stack, Title, Text, List, ListItem, Group, Anchor, PillGroup, useMantineTheme, ThemeIcon, Tooltip } from "@mantine/core";
+import { Container, Divider, Stack, Title, Text, Group, Anchor, Tooltip, ThemeIcon } from "@mantine/core";
 import { IconBrandMantine, IconBrandNextjs, IconBrandReact, IconBrandTypescript } from "@tabler/icons-react";
 import React from "react";
 
@@ -53,7 +53,7 @@ function Page() {
         </Text>
         <Text>
           Next.js and Mantine and both much easier to setup and use compared to my Rust approach and saved me a lot of time.
-          I had less fun than when I was using Rust but I also got this site mostly written in ~half the time it might've taken me in Rust.
+          I had less fun than when I was using Rust but I also got this site mostly written in ~half the time it might&apos;ve taken me in Rust.
         </Text>
       </Stack>
     </Container>

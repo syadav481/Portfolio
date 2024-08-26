@@ -1,11 +1,10 @@
 "use client";
 
-import { Button, Pill, Space, Text, ThemeIcon } from "@mantine/core";
+import { Button, Pill, Space, Text } from "@mantine/core";
 import { useOs } from "@mantine/hooks";
 import { spotlight, Spotlight, SpotlightActionData } from "@mantine/spotlight";
-import { IconCommand, IconSearch } from "@tabler/icons-react";
+import { IconSearch } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
-import React from "react";
 
 function GlobalSearch() {
   const os = useOs();
