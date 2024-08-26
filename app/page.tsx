@@ -22,7 +22,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <Center>
+    <Center style={{ margin: '1rem' }}>
       <Stack>
         <Group>
           <AspectRatio ratio={1}>

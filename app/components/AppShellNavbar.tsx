@@ -9,8 +9,10 @@ import GlobalSearch from "./GlobalSearch";
 
 export default function AppShellNavbar() {
   return (
-    <Center style={{ padding: '0.5rem', margin: '0.5rem' }}>
+    <Center>
       <Group
+        style={{ padding: '0.5rem', margin: '0.5rem' }}
+        justify="center"
       >
         <ToggleColorSchemeButton />
         <HomeButton />
